@@ -3,10 +3,9 @@ package com.clases;
 
 public class Main {
     public static void main(String[] args) {
-        var employee = new Employee();
-        employee.setBaseSalary(50_000);//Hay un problema, qué pasa si introducimos numeros negativos? Hay que validar estas entradas.
-        employee.setHourlyRate(50);
-        int wage = employee.calculateWage(10);
-        System.out.println(wage);
+        //vamos a crear un nuevo objeto browser y para ello no vas a escribirlo todo, simplemente new Browser() y ya podras ver la bombilla.
+        // y luego lo cambias a var.
+        var browser = new Browser();
+
     }
 }
