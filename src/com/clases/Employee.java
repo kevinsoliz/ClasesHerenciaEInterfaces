@@ -9,7 +9,7 @@ public class Employee {
     }
 
 
-    public int getHourlyRate() {
+    private int getHourlyRate() {
         return hourlyRate;
     }
 
@@ -19,7 +19,8 @@ public class Employee {
         this.hourlyRate = hourlyRate;
     }
 
-    public int getBaseSalary() {
+    private int getBaseSalary() { //Ahora mismo los getters son public, esto proporciona detalles innecesarios y el coupleling también aumenta.
+                                // Para evitarlo los hacemos private, así reducimos el coupleling.
         return baseSalary;
     }
 
