@@ -4,6 +4,10 @@ public class Employee {
     private int baseSalary; // Para controlar las validaciones debemos cambiar el modificador de acceso a private.
     private int hourlyRate;
 
+    public Employee(int baseSalary, int hourlyRate) {
+        setBaseSalary(baseSalary); // si hicieras: this.baseSalay = baseSalary se podrian introducir valores inválidos.
+        setHourlyRate(hourlyRate);
+    }
     public int calculateWage(int extraHours){ // Digamos que las horas extra es la única variable que no es fija
         return getBaseSalary() + (getHourlyRate() * extraHours);
     }
