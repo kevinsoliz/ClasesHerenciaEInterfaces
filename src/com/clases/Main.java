@@ -3,12 +3,16 @@ package com.clases;
 
 public class Main {
     public static void main(String[] args) {
-        //vamos a crear un nuevo objeto browser y para ello no vas a escribirlo todo, simplemente new Browser() y ya podras ver la bombilla.
-        // y luego lo cambias a var.
-        var browser = new Browser(); //los dos metodos restantes serán private porque no los vamos a usar en el main.
-                                    //De esta manera la interfaz de este objeto es más simple.
-        //la oop es una manera de pensar, una filosofia. No solo un porrón de metodos con variables.
-
+        var employee = new Employee();
+        employee.setBaseSalary(50_000);
+        employee.setHourlyRate(20);
+        int wage = employee.calculateWage(10);
+        System.out.println(wage);
+        //Todo ese codigo es una mala implementación porque no queremos obligar a los clientes de nuestras clases a que las usen
+        // de una determinada manera. Es como si tu mando te obligase a pulsar a y luego b para poder cambiar de canal.
+        // Queremos que la interfaz de esta clase sea lo más simple posible, para ahorrarnos el trabajo de adivinar a ver cómo funciona.
+        // NECESITAMOS UN CONSTRUCTOR! Java automaticamente crea el método constructor. Y establecera los valores de los fields de los
+        //primitive types a 0, los booleans a false y los de referencia a null.
 
     }
 }
