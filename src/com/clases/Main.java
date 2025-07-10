@@ -4,11 +4,9 @@ package com.clases;
 public class Main {
     public static void main(String[] args) {
         var employee = new Employee(50_000, 20);
-        int wage = employee.calculateWage(0); //No puedes sobrecargar un método demasiado, en este caso no haría falta
-                                                        // porque el cambio de parámetros es sutil,
-                                                        // Debes hacer sobrecarga cuando los poarámetros son realmente diferentes
-                                                        // cuando pasas de enteros a los de referencia.
+        int wage = employee.calculateWage(0);
         System.out.println(wage);
+        Employee employee1 = new Employee(23_000); //comando + p para ver la sobrecarga.
 
 
     }
