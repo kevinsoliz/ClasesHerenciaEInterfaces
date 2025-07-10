@@ -12,6 +12,10 @@ public class Employee {
         return getBaseSalary() + (getHourlyRate() * extraHours);
     }
 
+    public int calculateWage(){ // En python puedes poner un valor por defecto directamente en el parámetro.
+        return calculateWage(0);
+    }
+
 
     private int getHourlyRate() {
         return hourlyRate;
