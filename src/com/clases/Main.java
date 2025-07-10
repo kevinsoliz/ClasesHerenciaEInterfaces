@@ -7,6 +7,7 @@ public class Main {
         int wage = employee.calculateWage(0);
         System.out.println(wage);
         Employee employee1 = new Employee(23_000); //comando + p para ver la sobrecarga.
+        Employee.getNumberOfEmployees(); // un miembro de clase no se puede acceder desde un objeto.
 
 
     }
