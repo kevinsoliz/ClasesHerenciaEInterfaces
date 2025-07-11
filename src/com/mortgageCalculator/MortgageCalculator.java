@@ -1,5 +1,7 @@
 package com.mortgageCalculator;
 
+//Esta clase se encarga únicamente del cálculo, no tiene nada que ver con la presentación de estos datos, la presentación es tarea de otra clase.
+
 public class MortgageCalculator {
     public final static byte MONTHS_IN_YEAR = 12;
     public final static byte PERCENT = 100;
