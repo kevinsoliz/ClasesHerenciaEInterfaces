@@ -25,13 +25,7 @@ public class MortgageCalculator {
         return balance;
     }
 
-    private float getNumberOfPayments() {
-        return years * MONTHS_IN_YEAR;
-    }
 
-    private float getMonthlyInterest() {
-        return annualInterest / PERCENT / MONTHS_IN_YEAR;
-    }
 
     public double calculateMortgage() {
 
@@ -47,5 +41,13 @@ public class MortgageCalculator {
 
     public byte getYears() {
         return years;
+    }
+
+    private float getNumberOfPayments() {
+        return years * MONTHS_IN_YEAR;
+    }
+
+    private float getMonthlyInterest() {
+        return annualInterest / PERCENT / MONTHS_IN_YEAR;
     }
 }
