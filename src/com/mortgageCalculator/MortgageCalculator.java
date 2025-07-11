@@ -2,6 +2,8 @@ package com.mortgageCalculator;
 
 //Esta clase se encarga únicamente del cálculo, no tiene nada que ver con la presentación de estos datos, la presentación es tarea de otra clase.
 
+import java.text.NumberFormat;
+
 public class MortgageCalculator {
     public final static byte MONTHS_IN_YEAR = 12;
     public final static byte PERCENT = 100;
@@ -28,7 +30,6 @@ public class MortgageCalculator {
     }
 
 
-
     public double calculateMortgage() {
 
         float monthlyInterest = getMonthlyInterest();
@@ -41,11 +42,20 @@ public class MortgageCalculator {
         return mortgage;
     }
 
+    public double[] getRemainingBalance() {
+        var balances = new double[getNumberOfPayments()];
+        for (short month = 1; month <= getNumberOfPayments(); month++) {
+            double balance = calculateBalance(month);
+            balances[getNumberOfPayments() - 1] = balance;
+
+        }
+    }
+
     public byte getYears() {
         return years;
     }
 
-    private float getNumberOfPayments() {
+    private int getNumberOfPayments() {
         return years * MONTHS_IN_YEAR;
     }
 
