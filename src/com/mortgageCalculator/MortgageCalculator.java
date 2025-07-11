@@ -44,11 +44,12 @@ public class MortgageCalculator {
 
     public double[] getRemainingBalance() {
         var balances = new double[getNumberOfPayments()];
-        for (short month = 1; month <= getNumberOfPayments(); month++) {
-            double balance = calculateBalance(month);
-            balances[getNumberOfPayments() - 1] = balance;
 
-        }
+        for (short month = 1; month <= balances.length; month++)
+            balances[month - 1] = calculateBalance(month);
+
+        return balances;
+
     }
 
     public byte getYears() {
