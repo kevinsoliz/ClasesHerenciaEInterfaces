@@ -1,10 +1,16 @@
 package com.clases;
 
-public class TextBox {
-    public String text = ""; //por defecto si no inicializas esta variable estará establecida a null.
-                        //Los nulls son peligrosos y pueden crash our programs
+import com.Inheritance.UIControl;
 
-    public void setText(String text) { // In situations where the name of the parameter is the same as the field we use this. keyword
+public class TextBox extends UIControl {
+    public String text = "";
+
+    public TextBox(boolean isEnabled) {
+        super(isEnabled); // el super qué es el constructor del padre, siempre debe inicializarse en la primera linea de codigo.
+        System.out.println("TextBox");
+    }
+
+    public void setText(String text) {
         this.text = text;
     }
 
