@@ -17,4 +17,9 @@ public class TextBox extends UIControl {
     public void clear() { // It's not necessary here
         text = "";
     }
+
+    @Override //this is an annotation, le da información extra al compilador de Java.
+    public String toString() {
+        return text;
+    }
 }
