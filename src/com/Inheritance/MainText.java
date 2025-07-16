@@ -4,7 +4,7 @@ import com.clases.TextBox;
 
 public class MainText {
     public static void main(String[] args) {
-        var control = new UIControl(true);
+        //var control = new UIControl(true);
         var text = new TextBox(true);
         show(text);
     }

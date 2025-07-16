@@ -3,10 +3,10 @@ package com.Inheritance;
 public class UIControl {
     private boolean isEnabled = true;
 
-    public UIControl(boolean isEnabled) {
-      this.isEnabled = isEnabled;
-        System.out.println("UIControl yeah");
-    }
+//    public UIControl(boolean isEnabled) {
+//      this.isEnabled = isEnabled;
+//        System.out.println("UIControl yeah");
+//    }
 
 
     public final void enable() {
@@ -19,5 +19,9 @@ public class UIControl {
 
     public boolean isEnabled() {
         return isEnabled;
+    }
+
+    public void render(){
+        // lo dejamos vacio, cada hijo renderizara de una manera especifiac
     }
 }

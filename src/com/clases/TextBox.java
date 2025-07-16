@@ -6,7 +6,7 @@ public class TextBox extends UIControl {
     public String text = "";
 
     public TextBox(boolean isEnabled) {
-        super(isEnabled); // el super qué es el constructor del padre, siempre debe inicializarse en la primera linea de codigo.
+       // super(isEnabled); // el super qué es el constructor del padre, siempre debe inicializarse en la primera linea de codigo.
         System.out.println("TextBox");
     }
 
@@ -21,5 +21,10 @@ public class TextBox extends UIControl {
     @Override //this is an annotation, le da información extra al compilador de Java.
     public String toString() {
         return text;
+    }
+
+    @Override
+    public void render() {
+        System.out.println("Rendering TextBox");
     }
 }
