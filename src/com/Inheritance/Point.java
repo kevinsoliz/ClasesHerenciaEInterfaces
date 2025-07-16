@@ -11,16 +11,16 @@ public class Point {
         this.y = y;
     }
 
-    @Override
-    public boolean equals(Object obj) { //El problema es que se podrá meter cualquier tipo de objeto y dará una ClasCastException
-                                        //Incluso se podría meter el mismo objeto.
-        if (this == obj)
-            return true;
-        if (!(obj instanceof Point))
-            return false;
-        var other = (Point) obj;
-        return x == other.x && y == other.y;
-    }
+//    @Override
+//    public boolean equals(Object obj) { //El problema es que se podrá meter cualquier tipo de objeto y dará una ClasCastException
+//                                        //Incluso se podría meter el mismo objeto.
+//        if (this == obj)
+//            return true;
+//        if (!(obj instanceof Point))
+//            return false;
+//        var other = (Point) obj;
+//        return x == other.x && y == other.y;
+//    }
     //Genera un entero para indexar objetos Si a.equals(b) es true, entonces a.hashCode() == b.hashCode()
     //Cuando usas clases como HashMap o HashSet, Java:
     //Usa hashCode() para saber en qué "casilla" del hash ubicar el objeto.
@@ -28,8 +28,23 @@ public class Point {
 
     //hashCode y equals van siempre juntos.
 
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(x, y); //ya lo tendrias.
+//    }
+
+    //generado desde el menu:
+    @Override
+    public boolean equals(Object o) {
+        //faltaria esta linea:
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Point point = (Point) o;
+        return x == point.x && y == point.y;
+    }
+
     @Override
     public int hashCode() {
-        return Objects.hash(x, y); //ya lo tendrias.
+        return Objects.hash(x, y);
     }
 }
