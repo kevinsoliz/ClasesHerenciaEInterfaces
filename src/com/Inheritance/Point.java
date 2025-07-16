@@ -8,4 +8,10 @@ public class Point {
         this.x = x;
         this.y = y;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Point p = (Point) obj; // hay que hacer el downcasting si o si
+        return x == p.x && y == p.y;
+    }
 }
