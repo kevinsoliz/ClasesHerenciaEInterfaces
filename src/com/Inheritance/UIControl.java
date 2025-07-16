@@ -1,6 +1,6 @@
 package com.Inheritance;
 
-public class UIControl {
+public abstract class UIControl { //como clase abstracta, todos los hijos que hereden de ella deben implementar los métodos abstractos
     private boolean isEnabled = true;
 
 //    public UIControl(boolean isEnabled) {
@@ -21,7 +21,7 @@ public class UIControl {
         return isEnabled;
     }
 
-    public void render(){
+    public abstract void render();
         // lo dejamos vacio, cada hijo renderizara de una manera especifiac
-    }
+
 }
