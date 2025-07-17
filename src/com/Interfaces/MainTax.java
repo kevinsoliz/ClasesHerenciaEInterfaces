@@ -8,10 +8,11 @@ public class MainTax {
         // no habrá problemas.
         var calculator = new TaxCalculator2025(100_000);
         var taxReport = new TaxReport(calculator);
+        taxReport.show();
 
-        //La forma de esta injection se llama "Poor mans dependency injection"
-        //Para un programa pequeño sí va bien pero cuando hay cientos de clases la cosa cambia.
-        //En estos casos necesita a "Dependency injection Framework", estas frameworks se ocupan de hacer la ijection
-        //Spring es una de ellas.
+        //Setter injection: a lo largo de la vida de nuestro programa quizás necesites cambiar la dependencia:
+        taxReport.setCalculator(new TaxCalculator2026());
+        taxReport.show();
+        //Ahora la Constructor Injection es la más común.
     }
 }
