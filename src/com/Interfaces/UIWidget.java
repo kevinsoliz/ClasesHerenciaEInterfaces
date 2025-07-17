@@ -1,10 +1,10 @@
 package com.Interfaces;
 
-public interface UIWidget {
+public interface UIWidget extends Draggable {
     void resize();
     void render();
-    // Interface segregation principle: debemos dividir esta interfaz en partes más pequeñas, interfaces que se encarguen de
-    // una sola capacidad: drag por un lado, resize por otro, etc.
+    // Ahora lo más probable es que vayamos a necesitar que esta interfaz lleve todos estos métodos juntos, para eso usamos
+    // la herencia.
 
 }
 

@@ -1,11 +1,10 @@
 package com.Interfaces;
 
 public class Dragger {
-    public void drag(UIWidget widget){
-        widget.drag(); //El problema aquí es que esta clase está emparejada a la interfaz y aunque parezca que no pasa nada,
-                        // sí que pasa! aunque esta clase solo use un metodo de la interfaz, si modificamos cualquier otro método
-                        // que no tenga nada que ver estás jodido, vas a tener que recompilar igualemente esta clase. El comentario continua
-                        // en la interfaz.
+    public void drag(Draggable draggable) {
+        draggable.drag(); // ya no nos importa si el draggable es un UIWidget o lo que sea, solo nos interesa lo que hace
+                        // ojo: solo tenemos un coupleling point porque el Draggable tiene solo un método pero si tuviera diez
+                        //serian diez coupleling points.
         System.out.println("Dragging done");
     }
 }
