@@ -1,10 +1,10 @@
 package com.Interfaces;
 
 public class TaxReport {
-    private TaxCalculator2025 calculator;
+    private TaxCalculator calculator;
 
-    public TaxReport() {
-        this.calculator = new TaxCalculator2025(100_000);
+    public TaxReport(TaxCalculator calculator) { //Esto es lo que se conoce como Constructor Injection
+        this.calculator = calculator;
     }
 
     public void show(){
