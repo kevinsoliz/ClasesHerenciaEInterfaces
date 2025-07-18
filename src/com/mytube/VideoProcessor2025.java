@@ -1,6 +1,6 @@
 package com.mytube;
 
-public class VideoProcessor2025 {
+public class VideoProcessor2025 implements VideoProcessor {
     private VideoEncoder encoder;
     private VideoDatabase database;
     private EmailService emailService;
@@ -11,6 +11,7 @@ public class VideoProcessor2025 {
         this.emailService = emailService;
     }
 
+    @Override
     public void process(Video video) {
         encoder.encode(video);
         database.store(video);
