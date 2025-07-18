@@ -1,5 +1,5 @@
 package com.mytube;
 
-public interface EmailService {
+public interface NotificationService {
     void sendEmail(User user);
 }

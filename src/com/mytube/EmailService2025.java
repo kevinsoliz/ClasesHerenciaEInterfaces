@@ -1,6 +1,6 @@
 package com.mytube;
 
-public class EmailService2025 implements EmailService {
+public class EmailService2025 implements NotificationService {
     @Override
     public void sendEmail(User user) {
         System.out.println("Notifying " + user.getEmail() + "...");
